@@ -1,0 +1,380 @@
+/* ==============================
+        Page Load Animations
+================================ */
+
+
+.hero-text {
+
+    animation: fadeUp 1s ease forwards;
+
+}
+
+
+.hero-card {
+
+    animation: fadeUp 1s ease .2s forwards,
+               floating 5s ease-in-out infinite;
+
+    opacity:0;
+
+}
+
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ==============================
+        Aurora Animation
+================================ */
+
+
+
+.aurora span {
+
+
+    animation: moveAurora 15s infinite alternate ease-in-out;
+
+
+}
+
+
+
+.aurora span:nth-child(2){
+
+
+    animation-duration:20s;
+
+
+}
+
+
+
+.aurora span:nth-child(3){
+
+
+    animation-duration:25s;
+
+
+}
+
+
+
+
+
+@keyframes moveAurora {
+
+
+    from {
+
+
+        transform:
+
+        translate(0,0)
+
+        scale(1);
+
+
+    }
+
+
+
+    to {
+
+
+        transform:
+
+        translate(80px,-50px)
+
+        scale(1.2);
+
+
+    }
+
+
+}
+
+
+
+
+
+/* ==============================
+        Floating Card
+================================ */
+
+
+
+@keyframes floating {
+
+
+    0% {
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+
+    50% {
+
+
+        transform:translateY(-15px);
+
+
+    }
+
+
+
+    100% {
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+/* ==============================
+        Button Animation
+================================ */
+
+
+
+.btn {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.btn::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.25),
+
+        transparent
+
+    );
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.btn:hover::before {
+
+
+    left:100%;
+
+
+}
+
+
+
+/* ==============================
+        Card Hover
+================================ */
+
+
+
+.card {
+
+
+    transition:.4s ease;
+
+
+}
+
+
+
+.card:hover {
+
+
+    transform:
+
+    translateY(-10px)
+
+    scale(1.02);
+
+
+    border-color:
+
+    rgba(59,130,246,.5);
+
+
+}
+
+
+
+/* ==============================
+        Navigation Hover
+================================ */
+
+
+
+.nav-links a {
+
+
+    position:relative;
+
+
+}
+
+
+
+.nav-links a::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    bottom:-8px;
+
+    left:0;
+
+
+    width:0;
+
+    height:2px;
+
+
+    background:
+
+    var(--primary-color);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.nav-links a:hover::after {
+
+
+    width:100%;
+
+
+}
+
+
+
+
+/* ==============================
+        Scroll Reveal
+================================ */
+
+
+.hero-text,
+.hero-card {
+
+
+    opacity:0;
+
+}
+
+
+.show {
+
+
+    animation:
+
+    fadeUp 1s ease forwards;
+
+
+}
+
+
+
+
+/* ==============================
+        Reveal Animation
+================================ */
+
+
+.reveal {
+
+
+opacity:0;
+
+
+transform:translateY(40px);
+
+
+transition:.7s ease;
+
+
+}
+
+
+
+.reveal.active {
+
+
+opacity:1;
+
+
+transform:translateY(0);
+
+
+}
