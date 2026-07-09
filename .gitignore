@@ -1,0 +1,21 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.log
+
+# Personal files
+.env
+
+# Python files (if adding backend projects later)
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env/
